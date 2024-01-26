@@ -460,6 +460,12 @@ class Post:
         except KeyError:
             return []
 
+
+    @property 
+    def saved_collection_ids(self) -> List[str]: 
+        """List of all the collections IDs it has been saved to."""
+        return self._iphone_struct["saved_collection_ids"]
+
     @property
     def is_video(self) -> bool:
         """True if the Post is a video."""
